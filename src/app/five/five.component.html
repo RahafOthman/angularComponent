@@ -1,0 +1,19 @@
+<!--
+    This is for main Task 
+    <p >This is Five component:</p>
+    ///component
+      @Input() RecivedData ='' ; 
+
+<p><span>ResivedData:</span>{{RecivedData}}</p>-->
+<div class=" py-3 px-5 border border-success w-50 m-auto text-center">
+   <p >
+      <label>Min Value:  </label>
+      <input type="text" placeholder="min value" required #minValue/>
+   </p>
+   <p>
+      <label>Max Value:  </label>
+      <input type="text" placeholder="max value" required #maxValue/>
+   </p>
+   <p>Start point</p>
+   <button (click)="sendData(minValue.value,maxValue.value)" class="btn btn-success">Click</button>
+</div>

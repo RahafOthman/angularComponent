@@ -1,0 +1,15 @@
+<!--
+    This is for main task 
+    <div style="border: 1px solid red ;">
+    <h2>This is two Component</h2>
+    <p><span>RecivedData:</span>{{RecivedData}}</p>
+    <app-four></app-four>
+    <app-five [RecivedData]="RecivedData"></app-five>
+</div>
+    //component
+      @Input() RecivedData = '' ; 
+
+-->
+
+<app-five (outputData)="SetMinValue($event)" (outputdata2)="SetMaxValue($event)"></app-five>
+<app-four></app-four>

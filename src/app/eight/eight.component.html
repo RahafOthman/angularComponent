@@ -1,0 +1,23 @@
+<!--
+    
+    This is for main task
+    <p>eight works!</p>
+<button class="btn btn-primary" (click)="OnClickBtn()">Click</button>
+//component
+    @Output() data = new EventEmitter<any>(); 
+  Title = 'Angular';
+  OnClickBtn():void{
+    this.data.emit(this.Title);
+    console.log(this.Title);
+
+  }
+-->
+
+<div class="border border-success m-auto p-2 text-center w-50">
+  <h5>Recived Data </h5>
+  <p> <br>
+    Min Value:<span class="text-success">{{MinValueRecived}}</span>
+    <br>
+    Max Value:<span class="text-success">{{MaxValueRecived}}</span>
+  </p>
+</div>

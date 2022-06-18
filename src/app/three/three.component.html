@@ -1,0 +1,26 @@
+<!--
+    This is for main task
+    <diV style="border:1px solid yellow;">
+    <h3>This is Three Component</h3>
+    <app-seven></app-seven>
+    <app-eight (data)="sendData($event)"></app-eight>
+</diV>
+//component
+  @Output() dataRecived  = new EventEmitter<any>();
+
+sendData(data:string):void{
+    console.log(data+"3");
+    this.dataRecived.emit(data);
+  }
+
+-->
+<div class="text-center m-auto p-2">
+  <p>Recived Data in Component Three:
+    <br>
+    Min Value: <span class="text-success" >{{MinValueInput}}</span>
+    <br>
+    Max Value:<span class="text-success">{{MaxValueInput}}</span>
+  </p>
+<app-seven></app-seven>
+<app-eight [MinValueRecived]="MinValueInput" [MaxValueRecived]="MaxValueInput"></app-eight>
+</div>

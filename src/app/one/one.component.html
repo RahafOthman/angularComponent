@@ -1,0 +1,18 @@
+<!--
+    This is for main task 
+    <div class="border border-secondary">
+    <h1 [style.color]="h1Color">This is One Component</h1>
+    <app-two [RecivedData]="DataRecived"></app-two>
+    <app-six></app-six>
+    <app-three (dataRecived)="DataSaved($event)" ></app-three>
+</div>
+  //component
+    DataRecived = '' ; 
+  DataSaved(data:string):void{
+    this.DataRecived=data; 
+    console.log(this.DataRecived+"This is One Component");
+  }
+-->
+<app-two (minValueData)="recivedMinValue($event)" (maxValueData)="recivedMaxValue($event)"></app-two>
+<app-six></app-six>
+<app-three [MinValueInput]="minValueRecived" [MaxValueInput]="maxValueRecived"></app-three>
